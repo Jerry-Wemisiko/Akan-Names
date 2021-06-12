@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,36 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
-    <form action="submit">
-        <input type="text" name="">
-    </form>
-  <script src="script.js"></script>  
+    <div class="submitForm">
+        <form action="submit">
+            <div id="birth">
+                <label for="birthday">Enter your birthday</label>
+                <input type="text">
+                <label for="day">Day</label>
+                <input type="text">
+                <label for="month">Month</label>
+                <input type="text">
+            <label for="year">Year</label>  
+            <input type="text">          
+        </div>
+    
+            <div id="gender">
+                <label for="gender">Select your gender</label>
+                <select id="gender">
+                    <option value="gender">select gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+
+                </select>
+                <!-- <input type="submit" value="Submit"> -->
+            </div>
+            <button onclick="" type="submit">Submit</button>
+      
+    </div>
+</form>
+    <script src="script.js"></script>
 </body>
+
 </html>
