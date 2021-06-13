@@ -25,7 +25,9 @@ div h1{
     text-align: center;
     font-weight: 700;
 }
-
+div h1 p{
+    padding: 20px;
+}
 form select{
     margin: 20px;
     /* width: fit-content; */
