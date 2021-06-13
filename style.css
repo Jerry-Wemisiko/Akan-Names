@@ -1,3 +1,6 @@
+.body{
+    background-color:gray;
+}
 .container{
     /* margin: 20px; */
     background-color: burlywood;
@@ -37,4 +40,5 @@ form button{
     margin-right: 250px;
     margin-bottom: 10px;
     width: fit-content;
+    border-radius: 5px;
 }

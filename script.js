@@ -9,6 +9,7 @@ function computeForm() {
     var mm = document.getElementById("month");
     var yy = document.getElementById("year");
 
+ //How javascript will access your selected valus from options in the form
     day = dd.options[dd.selectedIndex].value;
     month = mm.options[mm.selectedIndex].value;
     year = yy.options[yy.selectedIndex].value;
@@ -17,18 +18,19 @@ function computeForm() {
         gender = "male";
       } else if (document.getElementById("female").checked) {
         gender = "female";
-      } else {
-        gender = "NONE";
       }
 
-      if (gender === "NONE"){
-        alert("Invalid gender");
-      } else if (parseInt(day) <= 0 || parseInt(day) > 31) {
+    //   if (gender === null){
+    //       alert("Input gender");
+    //       return false;
+    //   }
+
+      if (parseInt(day) <= 0 || parseInt(day) > 31) {
         alert("Invalid day");
       } else if (parseInt(month) <= 0 || parseInt(month) > 12) {
         alert("Month is invalid");
       } else {
-        akanName(day, month, year, gender);
+        akanName(gender,day, month, year);
       }
 
 
@@ -42,9 +44,9 @@ function akanName(gender, day, month, year) {
     // week[4] = "Thursday"
     // week[5] = "Friday"
     // week[6] = "Saturday"
-    var week = getWeekDay(day,month,year);
+    var week = Math.trunc(weekDay(day,month,year));
 
-    //Nested Array 
+    //Nested Array to store days of the week and assigned names to them
     var male = [
         {
         day: "Sunday",
@@ -69,7 +71,7 @@ function akanName(gender, day, month, year) {
         akan: "Kwame"
     }];
 
-
+//Female nested array
     var female = [
         {
         day: "Sunday",
@@ -96,21 +98,24 @@ function akanName(gender, day, month, year) {
 
     if(gender ===male)
     {
-        var result =male[week -1];
-        alert("Your Akan name is " + result.akan +"born on "+result.day);
+        var result =male[week];
+        document.getElementById("demo").innerHTML =("Your Akan name is  " + result.akan +" born on "+result.day);
     }else
     {
-        var result =female[week -1];
-        alert("Your Akan name is " + result.akan +"born on "+result.day);
+        var result =female[week];
+        document.getElementById("demo").innerHTML =("Your Akan name is  " + result.akan +" born on "+result.day);
     
     }
 
 }
-function getWeekDay(){
-    var YY =parseInt(year.substring(2,4));
+function weekDay(){
+//substring extract characters from the string
+
+    var CC =parseInt(year.substring(0,2))
+    var YY =parseInt(year.substring(0,5));
     var MM = parseInt(month);
     var DD =parseInt(day);
 
-    return  ( DD + (((MM + 1) *26)/10) + YY + (YY/4) + 5 * (YY/100) + (YY/400) - 1) % 7;
+  return  ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7;
 }
 }
