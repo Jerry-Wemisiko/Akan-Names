@@ -11,23 +11,23 @@
 
 <body>
     <div class="submitForm">
-        <form name="myForm" action="submit" onsubmit="return validateForm()">
+        <form name="myForm" action="submit">
             <div id="birth">
-
-
-                <!-- Label should have 3 input fields -->
-
-                <h1>Enter your birthday</h1>
-                <label id="day" for="day">Day</label>
-                <input name="day" type="text">
+ <!-- Label should have 3 input fields -->
+        <h1>Enter your birthday</h1>
+                <label for="day">Day</label>
+                    <input id="day" type="text">
                 <label for="month">Month</label>
-                <input name="month" type="text">
-            <label for="year">Year</label>  
-            <input name="year" type="text">          
-        </div>
-    
+                    <input id="month" type="text">
+                <label for="year">Year</label>
+                    <input id="year" type="text">
+                
+                <button onclick="calcbornDay()">display</button>
+                <p id="demo"></p>
+            </div>
+
             <div id="gender">
-                <h1>    Select your Gender</h1>
+                <h1> Select your Gender</h1>
                 <label for="gender">Select your gender</label>
                 <select id="gender">
                     <option value="gender">select</option>
@@ -37,10 +37,11 @@
                 </select>
                 <!-- <input type="submit" value="Submit"> -->
             </div>
+
             <button onclick="" type="submit">Submit</button>
-      
+        </form>
     </div>
-</form>
+
     <script src="script.js"></script>
 </body>
 
