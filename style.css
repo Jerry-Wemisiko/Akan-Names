@@ -1,3 +1,29 @@
+.container{
+    margin: 20px;
+    background-color: burlywood;
+    padding: 50px;
+ 
+}
+
+
 form{
+    width: 300px;
     margin-top: 200px;
+    /* padding-left:400px; */
+    border: solid 3px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    text-align: center;
+}
+
+div h1{
+    text-align: center;
+    font-weight: 700;
+}
+
+form select{
+    margin: 20px;
+
 }
