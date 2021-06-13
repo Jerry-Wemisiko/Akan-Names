@@ -1,21 +1,24 @@
 .container{
-    margin: 20px;
+    /* margin: 20px; */
     background-color: burlywood;
     padding: 50px;
+    align-content: center;
  
 }
 
 
 form{
     width: 300px;
-    margin-top: 200px;
+    margin-top: 180px;
     /* padding-left:400px; */
-    border: solid 3px;
+    border: solid 3px gray;
+    border-radius: 5px;
     height: fit-content;
     display: flex;
     flex-direction: column;
-    align-content: space-around;
+    /* align-content: space-around; */
     text-align: center;
+    margin-left: 480px;
 }
 
 div h1{
@@ -25,5 +28,12 @@ div h1{
 
 form select{
     margin: 20px;
+    /* width: fit-content; */
 
+}
+form button{
+    margin-left: 100px;
+    margin-right: 250px;
+    margin-bottom: 10px;
+    width: fit-content;
 }
