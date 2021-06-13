@@ -34,14 +34,15 @@ function computeForm() {
 
 function akanName(gender, day, month, year) {
     //Initialize day of the week array
-    week = new MakeArray(7);
-    week[0] = "Sunday"
-    week[1] = "Monday"
-    week[2] = "Tuesday"
-    week[3] = "Wednesday"
-    week[4] = "Thursday"
-    week[5] = "Friday"
-    week[6] = "Saturday"
+    // week = new MakeArray(7);
+    // week[0] = "Sunday"
+    // week[1] = "Monday"
+    // week[2] = "Tuesday"
+    // week[3] = "Wednesday"
+    // week[4] = "Thursday"
+    // week[5] = "Friday"
+    // week[6] = "Saturday"
+    var week = getWeekDay(day,month,year);
 
     //Nested Array 
     var male = [
@@ -103,8 +104,9 @@ function akanName(gender, day, month, year) {
         alert("Your Akan name is " + result.akan +"born on "+result.day);
     
     }
+
 }
-function dayOfTheWeek(){
+function getWeekDay(){
     var YY =parseInt(year.substring(2,4));
     var MM = parseInt(month);
     var DD =parseInt(day);
