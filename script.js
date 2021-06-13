@@ -1,37 +1,20 @@
-// Enter your birthday section
-    //An array for days;
-function birthday(){
-   var days =["Monday","Tuesday","Wednesday","Thursday","Friday"];
+//Form validation
+function validateForm(){
+    var day = document.myForm.day.value;
+    var month =document.myForm.month.value;
+    var year =document.myForm.year.value;
 
-    var months=["January","February","March","April","May","June","July","August","September","October","November","December"];
-
-    if (days<0 || days>31){
-        alert("Invalid")
+    if (day<0 || day>31){
+        alert("Day is invalid");
+        return false;
+    }else if(month<0 ||month>12){
+        alert("Month is invalid");
+        return false;
     }
-    if (months<0||months>12){
-        alert("Invalid")
+
+    if(year<1900){
+        alert("Extremely old");
+        return false;
     }
-
-
-
 }
 
-
-
-
-
-    var days =["Monday","Tuesday","Wednesday","Thursday","Friday"];
-    //An array for months
-    var months=["January","February","March","April","May","June","July","August","September","October","November","December"];
-     //operators 
-    if (days<0 || days>31){
-        alert("Invalid")
-    }
-
-    if (months<0||months>12){
-        alert("Invalid")
-    }
-    //function to calculate day of the week one was born
-
-// //Gender section
-//Button to display Akan name 
