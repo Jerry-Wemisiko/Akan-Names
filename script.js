@@ -16,14 +16,13 @@ function computeForm() {
 
     if (document.getElementById("male").checked) {
         gender = "male";
-    } else if (document.getElementById("female").checked) {
+    } 
+     if (document.getElementById("female").checked) {
         gender = "female";
-    }
-
-    //   if (gender === null){
-    //       alert("Input gender");
-    //       return false;
-    //   }
+    }if (gender === null){
+          alert("Input gender");
+          return false;
+      }
 
     if (parseInt(day) <= 0 || parseInt(day) > 31) {
         alert("Invalid day");
@@ -124,11 +123,10 @@ function computeForm() {
         //substring extract characters from the string
 
         var CC = parseInt(year.substring(0, 2));
-        var YY = parseInt(year.substring(0, 5));
+        var YY = parseInt(year.substring(2, 4));
         var MM = parseInt(month);
         var DD = parseInt(day);
 
         return (CC / 4 - 2 * CC - 1 + (5 * YY) / 4 + (26 * (MM + 1)) / 10 + DD) % 7;
     }
 }
-

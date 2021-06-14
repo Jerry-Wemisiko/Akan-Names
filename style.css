@@ -22,7 +22,9 @@ form{
     text-align: center;
     margin-left: 480px;
 }
-
+.checkBox{
+    padding: 10px;
+}
 div h1{
     text-align: center;
     font-weight: 700;
@@ -42,3 +44,7 @@ form button{
     width: fit-content;
     border-radius: 5px;
 }
+
+
+
+
