@@ -16,13 +16,14 @@ function computeForm() {
 
     if (document.getElementById("male").checked) {
         gender = "male";
-    } 
-     if (document.getElementById("female").checked) {
+    }
+    if (document.getElementById("female").checked) {
         gender = "female";
-    }if (gender === null){
-          alert("Input gender");
-          return false;
-      }
+    }
+    if (gender === null) {
+        alert("Input gender");
+        return false;
+    }
 
     if (parseInt(day) <= 0 || parseInt(day) > 31) {
         alert("Invalid day");
@@ -75,7 +76,7 @@ function computeForm() {
             },
         ];
 
-         //Nested Array to store days of the week and assigned names for male gender
+        //Nested Array to store days of the week and assigned names for male gender
         var female = [{
                 day: "Sunday",
                 akan: " Akosua",

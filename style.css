@@ -1,15 +1,16 @@
-.body{
-    background-color:gray;
+.body {
+    background-color: gray;
 }
-.container{
+
+.container {
     /* margin: 20px; */
     background-color: burlywood;
     padding: 50px;
     align-content: center;
- 
+
 }
 
-form{
+form {
     width: 300px;
     margin-top: 180px;
     /* padding-left:400px; */
@@ -22,29 +23,29 @@ form{
     text-align: center;
     margin-left: 480px;
 }
-.checkBox{
+
+.checkBox {
     padding: 10px;
 }
-div h1{
+
+div h1 {
     text-align: center;
     font-weight: 700;
 }
+
 /* div  p{
     padding: 20px; */
 /* } */
-form select{
+form select {
     margin: 20px;
     /* width: fit-content; */
 
 }
-form button{
+
+form button {
     margin-left: 100px;
     margin-right: 250px;
     margin-bottom: 10px;
     width: fit-content;
     border-radius: 5px;
 }
-
-
-
-
